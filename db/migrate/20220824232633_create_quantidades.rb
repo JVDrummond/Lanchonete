@@ -1,0 +1,9 @@
+class CreateQuantidades < ActiveRecord::Migration[5.2]
+  def change
+    create_table :quantidades do |t|
+      t.string :quantidade
+
+      t.timestamps
+    end
+  end
+end

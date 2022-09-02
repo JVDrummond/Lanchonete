@@ -1,0 +1,24 @@
+<%= form_with(model: quantidade, local: true) do |form| %>
+  <% if quantidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quantidade.errors.count, "error") %> prohibited this quantidade from being saved:</h2>
+
+      <ul>
+      <% quantidade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :quantidade %>
+
+    <%= form.text_field :quantidade, class:"form-control"%>
+  </div>
+
+  <div class="actions">
+   <div></div>
+    <%= form.submit nil, class: "btn btn-danger" %>
+  </div>
+<% end %>

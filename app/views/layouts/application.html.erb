@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <%#link_to 'Produção', root_path, class:"nav-link"%>
+      </li>
+      <li class="nav-item">
+        <%#link_to 'usuario', root_path, class: "nav-link"%>
+      </li>
+    </ul>
+      <%= yield %>
+      <script> $.notify("Funcionou!!!", "success"); </script>
+    </div>
+  </body> 
+</html>

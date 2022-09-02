@@ -1,0 +1,14 @@
+{
+  "name": "Lanchonete",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "jquery": "^3.6.1",
+    "notify-js-legacy": "^0.4.1",
+    "popper.js": "^1.16.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "João <joaovitordrummond13@gmail.com>",
+  "license": "MIT"
+}

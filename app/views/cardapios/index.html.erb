@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron">
+  <div class="text-center">
+    <h1 class="display-4"> Mara Lanches</h1>
+    <p class="lead"> Seja bem vindo ao nosso cardápio virtual</p>
+    <hr class="my-4">
+    <p>Faça seu pedido e aguarde para a retirada.</p>
+  </div>
+
+    <table class="table table-hover">
+      <tbody> 
+        <% @cardapios.each do |cardapio| %>
+          <tr>
+            <td><%cardapio.cardapio%></td>
+            <th><%= %></th>
+            <td><%= cardapio.bauru%></td>
+            <td><%= cardapio.quantidade%></td>
+            <td><% link_to t('link.show'), cardapio %></td>
+            <td><%= link_to t('link.editar'), edit_cardapio_path(cardapio) %></td>
+            <td><%= link_to t('link.excluir'), cardapio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="text-center">
+      <%= link_to 'Adicionar itens', new_cardapio_path, class:"btn btn-danger btn-sm", role:"button" %>
+      <%= link_to 'Finalizar pedido', finalizados_path, class:"btn btn-danger btn-sm", role:"button" %>
+    </div>
+    
+</div>
+
+
+
+
+ 

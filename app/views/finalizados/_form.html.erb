@@ -1,0 +1,22 @@
+<%= form_with(model: finalizado, local: true) do |form| %>
+  <% if finalizado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(finalizado.errors.count, "error") %> prohibited this finalizado from being saved:</h2>
+
+      <ul>
+      <% finalizado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pedido %>
+    <%= form.text_field :pedido %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

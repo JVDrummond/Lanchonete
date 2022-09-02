@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Quantidades</h1>
+
+<table class="table table-hover">
+  
+  <thead>
+    <tr>
+      <th>Quant.</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @quantidades.each do |quantidade| %>
+      <tr>
+        <td><%= quantidade.quantidade %></td>
+        <td><%link_to 'Show', quantidade %></td>
+        <td><%= link_to 'Editar', edit_quantidade_path(quantidade) %></td>
+        <td><%= link_to 'Excluir', quantidade, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to 'Adicionar quantidades', new_quantidade_path, class: "btn btn-danger"%>
+

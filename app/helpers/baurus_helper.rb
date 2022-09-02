@@ -1,0 +1,2 @@
+module BaurusHelper
+end

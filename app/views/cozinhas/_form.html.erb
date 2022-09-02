@@ -1,0 +1,27 @@
+<%= form_with(model: cozinha, local: true) do |form| %>
+  <% if cozinha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cozinha.errors.count, "error") %> prohibited this cozinha from being saved:</h2>
+
+      <ul>
+      <% cozinha.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pedido %>
+    <%= form.text_field :pedido %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_pedido %>
+    <%= form.text_field :id_pedido %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

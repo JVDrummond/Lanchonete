@@ -1,0 +1,23 @@
+<%= form_with(model: bauru, local: true) do |form| %>
+  <% if bauru.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bauru.errors.count, "error") %> prohibited this sorvete from being saved:</h2>
+
+      <ul>
+      <% bauru.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :bauru %>
+    <%= form.text_field :bauru, class:"form-control"%>
+  </div>
+
+  <div class="actions">
+    <div></div>
+    <%= form.submit nil, class: "btn btn-danger"%>
+  </div>
+<% end %>
